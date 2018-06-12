@@ -35,8 +35,6 @@ RUN NB_CORES=${BUILD_CORES-`getconf _NPROCESSORS_CONF`} && \
 	logrotate \
 	mediainfo \
 	nginx \
-	irssi \
-	irssi-perl \
 	zlib \
 	zlib-dev \
 	libxml2-dev \
@@ -112,11 +110,6 @@ git clone https://github.com/Phlooo/ruTorrent-MaterialDesign /usr/share/webapps/
 # ruTorrent plugins
 
 cd /usr/share/webapps/rutorrent/plugins/ && \
-svn co https://autodl-irssi.svn.sourceforge.net/svnroot/autodl-irssi/trunk/rutorrent/autodl-irssi && \
-cd autodl-irssi && \
-perl -pi -e "s/if \(\\$.browser.msie\)/if \(navigator.appName == 'Microsoft Internet Explorer' && navigator.userAgent.match\(\/msie 6\/i\)\)/g" /usr/share/webapps/rutorrent/plugins/autodl-irssi/AutodlFilesDownloader.js && \
-
-cd /usr/share/webapps/rutorrent/plugins/ && \
 git clone https://github.com/orobardet/rutorrent-force_save_session force_save_session && \
 git clone https://github.com/AceP1983/ruTorrent-plugins  && \
 mv ruTorrent-plugins/* . && \
@@ -145,11 +138,6 @@ git clone https://github.com/Gyran/rutorrent-instantsearch instantsearch && \
 git clone https://github.com/astupidmoose/rutorrent-logoff logoff && \
 git clone https://github.com/xombiemp/rutorrentMobile && \
 git clone https://github.com/dioltas/AddZip && \
-
-# install autodl-irssi perl modules
- perl -MCPAN -e 'my $c = "CPAN::HandleConfig"; $c->load(doit => 1, autoconfig => 1); $c->edit(prerequisites_policy => "follow"); $c->edit(build_requires_install_policy => "yes"); $c->commit' && \
- curl -L http://cpanmin.us | perl - App::cpanminus && \
-	cpanm HTML::Entities XML::LibXML JSON JSON::XS && \
 
 # compile xmlrpc-c
 cd /tmp && \
