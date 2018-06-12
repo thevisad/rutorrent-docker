@@ -58,6 +58,7 @@ RUN NB_CORES=${BUILD_CORES-`getconf _NPROCESSORS_CONF`} && \
 	tar \
 	unrar \
 	bzip2 \
+	cksfv \
 	unzip \
 	wget \
 	zip && \
@@ -115,7 +116,6 @@ git clone https://github.com/orobardet/rutorrent-force_save_session force_save_s
 git clone https://github.com/AceP1983/ruTorrent-plugins  && \
 mv ruTorrent-plugins/* . && \
 rm -rf ruTorrent-plugins && \
-apk add --no-cache cksfv && \
 git clone https://github.com/nelu/rutorrent-thirdparty-plugins.git && \
 mv rutorrent-thirdparty-plugins/* . && \
 rm -rf rutorrent-thirdparty-plugins && \
