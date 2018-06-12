@@ -58,6 +58,7 @@ RUN NB_CORES=${BUILD_CORES-`getconf _NPROCESSORS_CONF`} && \
 	tar \
 	unrar \
 	bzip2 \
+	bzip2-dev \
 	cksfv \
 	unzip \
 	wget \
