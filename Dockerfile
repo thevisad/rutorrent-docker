@@ -58,6 +58,7 @@ RUN NB_CORES=${BUILD_CORES-`getconf _NPROCESSORS_CONF`} && \
 	screen \
 	sox \
 	tar \
+	rar \
 	unrar \
 	unzip \
 	wget \
@@ -137,11 +138,6 @@ cd .. && \
 rm -rf plowshare* && \
 apk add --no-cache unzip bzip2 && \
 cd /tmp && \
-wget http://www.rarlab.com/rar/rarlinux-x64-5.4.0.tar.gz && \
-tar zxvf rarlinux-x64-5.4.0.tar.gz && \
-mv rar/rar /usr/bin && \
-mv rar/unrar /usr/bin && \
-rm -rf rar;rm rarlinux-* && \
 cd /usr/share/webapps/rutorrent/plugins/ && \
 git clone https://github.com/Gyran/rutorrent-pausewebui pausewebui && \
 git clone https://github.com/Gyran/rutorrent-ratiocolor ratiocolor && \
