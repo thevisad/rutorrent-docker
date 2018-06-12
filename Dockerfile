@@ -57,6 +57,7 @@ RUN NB_CORES=${BUILD_CORES-`getconf _NPROCESSORS_CONF`} && \
 	sox \
 	tar \
 	unrar \
+	bzip2 \
 	unzip \
 	wget \
 	zip && \
@@ -128,7 +129,6 @@ cd plowshare/ && \
 make install && \
 cd .. && \
 rm -rf plowshare* && \
-apk add --no-cache unzip bzip2 && \
 cd /tmp && \
 cd /usr/share/webapps/rutorrent/plugins/ && \
 git clone https://github.com/Gyran/rutorrent-pausewebui pausewebui && \
