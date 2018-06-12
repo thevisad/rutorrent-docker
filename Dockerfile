@@ -58,7 +58,6 @@ RUN NB_CORES=${BUILD_CORES-`getconf _NPROCESSORS_CONF`} && \
 	screen \
 	sox \
 	tar \
-	rar \
 	unrar \
 	unzip \
 	wget \
