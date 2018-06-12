@@ -53,6 +53,8 @@ RUN NB_CORES=${BUILD_CORES-`getconf _NPROCESSORS_CONF`} && \
 	php7-sockets \
 	php7-pear \
 	rtorrent \
+	irssi \
+	irssi-perl \
 	screen \
 	sox \
 	tar \
